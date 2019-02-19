@@ -1,33 +1,124 @@
-.App {
-  text-align: center;
+/* Simple Reset */
+
+*,
+html {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  height: 100%;
+  font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: #2c303a;
+  box-sizing: border-box;
+}
+
+/* Modular Scale: Base - 16px | Ratio - 1.067 */
+
+h1 {
+  font-size: 2.041em;
+}
+
+h2 {
+  font-size: 1.793em;
+}
+
+h3 {
+  font-size: 1.1575em;
+}
+
+h4 {
+  font-size: 1.383em;
+}
+
+h5 {
+  font-size: 1.296em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 1rem;
+}
+
+div::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+div::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+div::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(36, 36, 36, 0.5);
+}
+
+.App > .header {
+  background: #fa9c1e;
+  color: #ffffff;
+  padding: 16px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.team-list {
+  background: #3d4351;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.team-list > .team {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.team-list > .team:hover {
+  cursor: pointer;
+  background: #23262e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.team > .logo {
+  padding: 16px;
+}
+
+.team > .logo > img {
+  max-width: 64px;
+}
+
+.team > .name {
+  color: #ffffff;
+}
+
+.member-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+}
+
+.member {
+  background: #3d4351;
+}
+
+.member > .name {
+  padding: 8px 16px;
+}
+
+.member > .full-name {
+  padding: 8px 16px;
+}
+.avatar > img {
+  max-width: 256px;
 }
